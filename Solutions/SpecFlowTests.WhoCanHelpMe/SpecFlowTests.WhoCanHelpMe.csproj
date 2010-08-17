@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GetCategories.feature</DependentUpon>
     </Compile>
+    <Compile Include="Tasks\SearchTasksFeatures\SearchByTag.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchByTag.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\SearchTasksFeatures\SearchTaskSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WhoCanHelpMe.Domain\WhoCanHelpMe.Domain.csproj">
@@ -83,9 +89,12 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GetCategories.feature.cs</LastGenOutput>
     </None>
+    <None Include="Tasks\SearchTasksFeatures\SearchByTag.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SearchByTag.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(ProgramFiles)\MSBuild\Microsoft\StyleCop\v4.4\Microsoft.StyleCop.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

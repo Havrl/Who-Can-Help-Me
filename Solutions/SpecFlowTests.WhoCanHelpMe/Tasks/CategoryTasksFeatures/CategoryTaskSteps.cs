@@ -85,8 +85,8 @@
             }
         }
 
-        [Then(@"an empty list should be returned")]
-        public void ThenAnEmptyListShouldBeReturned()
+        [Then(@"an empty category list should be returned")]
+        public void ThenAnEmptyCategoryListShouldBeReturned()
         {
             Assert.That(this.getAllResult, Is.Empty);
         }

@@ -30,8 +30,8 @@ namespace SpecFlowTests.WhoCanHelpMe.Tasks.CategoryTasksFeatures
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Get categories", "In order to add meaning to my tags\r\nAs a user\r\nI want to get categories from the " +
-                    "repository", ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Get categories", "In order to add meaning to my tags\r\nAs a user\r\nI want to get a list of possible c" +
+                    "ategories from the repository", ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -86,7 +86,7 @@ testRunner.And("there are 0 categories in the repository");
 #line 15
 testRunner.When("I ask for all categories");
 #line 16
-testRunner.Then("an empty list should be returned");
+testRunner.Then("an empty category list should be returned");
 #line hidden
             testRunner.CollectScenarioErrors();
         }

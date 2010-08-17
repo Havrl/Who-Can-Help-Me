@@ -1,7 +1,7 @@
 ﻿Feature: Get categories
     In order to add meaning to my tags
     As a user
-    I want to get categories from the repository
+    I want to get a list of possible categories from the repository
 
 Scenario: Get all categories
     Given I have category tasks available
@@ -13,7 +13,7 @@ Scenario: No categories are available
     Given I have category tasks available
     And there are 0 categories in the repository
     When I ask for all categories
-    Then an empty list should be returned
+    Then an empty category list should be returned
 
 Scenario: Get a category by id
     Given I have category tasks available
