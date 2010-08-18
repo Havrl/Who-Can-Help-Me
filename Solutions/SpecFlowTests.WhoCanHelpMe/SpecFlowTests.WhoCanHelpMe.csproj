@@ -69,6 +69,26 @@
       <DependentUpon>SearchByTag.feature</DependentUpon>
     </Compile>
     <Compile Include="Tasks\SearchTasksFeatures\SearchTaskSteps.cs" />
+    <Compile Include="Tasks\TagTasksFeatures\GetMostPopularTags.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetMostPopularTags.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\TagTasksFeatures\GetTagsByFirstCharacters.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetTagsByFirstCharacters.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Web.Controllers\HomeControllerFeatures\HomePage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Web.Controllers\ProfileControllerFeatures\CreatingANewProfile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreatingANewProfile.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WhoCanHelpMe.Domain\WhoCanHelpMe.Domain.csproj">
@@ -93,7 +113,24 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SearchByTag.feature.cs</LastGenOutput>
     </None>
+    <None Include="Tasks\TagTasksFeatures\GetMostPopularTags.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GetMostPopularTags.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Tasks\TagTasksFeatures\GetTagsByFirstCharacters.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GetTagsByFirstCharacters.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Controllers\HomeControllerFeatures\HomePage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>HomePage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Controllers\ProfileControllerFeatures\CreatingANewProfile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreatingANewProfile.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
