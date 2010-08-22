@@ -25,29 +25,16 @@ namespace WhoCanHelpMe.Infrastructure.NHibernateMaps
     {
         public AutoPersistenceModel Generate()
         {
-            var mappings = new AutoPersistenceModel();
-            
-            mappings.AddEntityAssembly(typeof(Profile).Assembly).Where(GetAutoMappingFilter);
-            mappings.Conventions.Setup(GetConventions());
-            mappings.Setup(GetSetup());
+            var mappings = AutoMap.AssemblyOf<Profile>(new AutomappingConfiguration());
             mappings.IgnoreBase<Entity>();
             mappings.IgnoreBase(typeof(EntityWithTypedId<>));
+            mappings.Conventions.Setup(GetConventions());
             mappings.UseOverridesFromAssemblyOf<AutoPersistenceModelGenerator>();
 
             return mappings;
         }
 
-        /// <summary>
-        /// Provides a filter for only including types which inherit from the IEntityWithTypedId interface.
-        /// </summary>
-        private bool GetAutoMappingFilter(Type t)
-        {
-            return t.GetInterfaces().Any(x =>
-                                         x.IsGenericType && 
-                                         x.GetGenericTypeDefinition() == typeof(IEntityWithTypedId<>));
-        }
-
-        private Action<IConventionFinder> GetConventions()
+        private static Action<IConventionFinder> GetConventions()
         {
             return c =>
                    {
@@ -56,14 +43,6 @@ namespace WhoCanHelpMe.Infrastructure.NHibernateMaps
                        c.Add<HasManyConvention>();
                        c.Add<TableNameConvention>();
                    };
-        }
-
-        private Action<AutoMappingExpressions> GetSetup()
-        {
-            return c =>
-                       {
-                           c.FindIdentity = type => type.Name == "Id";
-                       };
         }
     }
 }
