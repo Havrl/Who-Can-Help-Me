@@ -5,7 +5,6 @@
 
     using global::WhoCanHelpMe.Domain;
     using global::WhoCanHelpMe.Domain.Contracts.Repositories;
-    using global::WhoCanHelpMe.Domain.Contracts.Specifications;
     using global::WhoCanHelpMe.Domain.Contracts.Tasks;
     using global::WhoCanHelpMe.Domain.Specifications;
     using global::WhoCanHelpMe.Tasks;
